@@ -5,7 +5,7 @@ sequences = {}
 gc_content_dict = {}
 current_id = ""
 
-with open("gccontent/rosalind_gc (1).txt", "r") as file:
+with open("gccontent/rosalind_gc.txt", "r") as file:
     for line in file: 
         line = line.strip()
         if line.startswith(">"):
@@ -15,10 +15,6 @@ with open("gccontent/rosalind_gc (1).txt", "r") as file:
             sequences[current_id] += line
 
 for seq_id, dna in sequences.items():
-    print(f"ID:  {seq_id} | Length: {len(dna)}")
-
-for seq_id, dna in sequences.items():
-    print("Processing: ", seq_id)
     gc_count = 0
     overall_count = 0
     for base in dna: 
