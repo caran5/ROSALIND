@@ -1,5 +1,3 @@
-from Bio import SeqIO
-
 # create a dictionary 
 sequences = {}
 gc_content_dict = {}
@@ -32,6 +30,4 @@ for seq, gc in gc_content_dict.items():
     if gc > gc_max_val: 
         gc_max_val = gc
         gc_max_key = seq
-print(gc_max_key)
-print(gc_max_val)
 
